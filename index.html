@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RGSon Carpet Cleaning | Best and Trusted Carpet Cleaning in Calgary</title>
+<meta name="description" content="RGSon Carpet Cleaning is a Calgary based carpet cleaning company. Truck-mounted carpet steam cleaning, upholstery, tile and grout, area rug, stain and odor removal for homes and businesses.">
+<link rel="icon" href="images/rgson-logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0C1376;
+  --navy-deep:#070B4A;
+  --green:#248740;
+  --lime:#4EBE16;
+  --orange:#FF4B2D;
+  --amber:#F39C12;
+  --paper:#F6F4EE;
+  --sand:#ECE8DD;
+  --ink:#14162B;
+  --muted:#5D6078;
+  --line:rgba(12,19,118,.14);
+  --sans:"Bricolage Grotesque",system-ui,sans-serif;
+  --serif:"Instrument Serif",Georgia,serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+html,body{overflow-x:clip}
+body{font-family:var(--sans);color:var(--ink);background:var(--paper);line-height:1.6;font-size:17px;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1240px,92%);margin-inline:auto}
+.eyebrow{display:inline-flex;align-items:center;gap:.6rem;font-size:.78rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--green)}
+.eyebrow::before{content:"";width:26px;height:2px;background:linear-gradient(90deg,var(--orange),var(--amber))}
+h1,h2,h3{font-weight:700;letter-spacing:-.025em;line-height:1.02}
+em.s{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing:-.01em}
+.btn{display:inline-flex;align-items:center;gap:.65rem;padding:1rem 1.6rem;border-radius:100px;font-weight:600;font-size:.98rem;transition:transform .25s,background .25s,color .25s,box-shadow .25s;border:2px solid transparent;cursor:pointer;font-family:inherit}
+.btn svg{width:18px;height:18px;transition:transform .25s}
+.btn:hover svg{transform:translateX(4px)}
+.btn-green{background:var(--green);color:#fff}
+.btn-green:hover{background:var(--lime);transform:translateY(-2px);box-shadow:0 10px 24px -10px rgba(36,135,64,.7)}
+.btn-line{border-color:var(--navy);color:var(--navy)}
+.btn-line:hover{background:var(--navy);color:#fff}
+.btn-white{background:#fff;color:var(--navy)}
+.btn-white:hover{background:var(--amber);color:var(--navy-deep)}
+.btn-ghost{border-color:rgba(255,255,255,.35);color:#fff}
+.btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.08)}
+
+/* utility bar */
+.util{background:var(--navy-deep);color:rgba(255,255,255,.78);font-size:.84rem}
+.util .wrap{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:.55rem 0}
+.util-l,.util-r{display:flex;gap:1.6rem;align-items:center}
+.util a:hover{color:#fff}
+.util svg{width:14px;height:14px;vertical-align:-2px;margin-right:.35rem;fill:var(--lime)}
+.soc{display:flex;gap:.5rem}
+.soc a{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;border:1px solid rgba(255,255,255,.2)}
+.soc a svg{margin:0;fill:#fff;width:13px;height:13px}
+.soc a:hover{background:var(--green);border-color:var(--green)}
+
+/* header */
+header{position:sticky;top:0;z-index:50;background:rgba(246,244,238,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:86px}
+.brand{display:flex;align-items:center;gap:.85rem}
+.brand img{width:62px;height:auto}
+.brand b{display:block;font-size:1.05rem;color:var(--navy);letter-spacing:-.01em;line-height:1.1}
+.brand small{display:block;font-size:.72rem;color:var(--muted);letter-spacing:.12em;text-transform:uppercase;font-weight:600}
+nav ul{display:flex;gap:2.2rem;list-style:none}
+nav a{font-weight:500;font-size:.96rem;color:var(--ink);position:relative;padding:.3rem 0}
+nav a::after{content:"";position:absolute;left:0;bottom:-2px;width:0;height:2px;background:var(--green);transition:width .3s}
+nav a:hover::after,nav a.on::after{width:100%}
+.hdr-cta{display:flex;align-items:center;gap:1.2rem}
+.hdr-phone{font-weight:700;color:var(--navy);font-size:.98rem}
+.hdr-phone span{display:block;font-size:.7rem;font-weight:600;color:var(--muted);letter-spacing:.1em;text-transform:uppercase}
+.burger{display:none;background:none;border:0;width:44px;height:44px;cursor:pointer}
+.burger span{display:block;width:24px;height:2px;background:var(--navy);margin:5px auto;transition:.3s}
+
+/* hero */
+.hero{position:relative;padding:4.5rem 0 0;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:3.5rem;align-items:center}
+.hero h1{font-size:clamp(2.9rem,6.4vw,5.6rem);color:var(--navy);margin:1.3rem 0 1.5rem}
+.hero h1 .tired{position:relative;color:#9A9CB0;font-weight:500}
+.hero h1 .tired::after{content:"";position:absolute;left:-4%;right:-4%;top:54%;height:.09em;background:var(--orange);transform:rotate(-4deg);border-radius:4px}
+.hero h1 em.s{color:var(--green);font-size:1.08em}
+.hero p.lead{font-size:1.14rem;color:var(--muted);max-width:540px}
+.hero-btns{display:flex;flex-wrap:wrap;gap:.9rem;margin:2.1rem 0 0}
+.hero-visual{position:relative;height:600px}
+.hero-img{position:absolute;inset:0 0 0 8%;clip-path:polygon(0 0,100% 0,100% 100%,22% 100%,0 78%);overflow:hidden}
+.hero-img img{width:100%;height:100%;object-fit:cover;object-position:62% center;transform:scale(1.05);animation:zoom 14s ease-out forwards}
+@keyframes zoom{to{transform:scale(1)}}
+.hero-img::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,11,74,0) 55%,rgba(7,11,74,.45))}
+.seal{position:absolute;left:-2%;top:40px;width:158px;height:158px;border-radius:50%;background:var(--paper);display:grid;place-items:center;box-shadow:0 20px 40px -18px rgba(7,11,74,.35);z-index:2}
+.seal svg.ring{position:absolute;inset:8px;width:calc(100% - 16px);height:calc(100% - 16px);animation:spin 22s linear infinite}
+.seal svg.ring text{font-size:10.6px;font-weight:700;letter-spacing:2.4px;fill:var(--navy);font-family:var(--sans)}
+.seal img{width:62px}
+@keyframes spin{to{transform:rotate(360deg)}}
+.hero-tag{position:absolute;right:22px;bottom:26px;z-index:2;background:#fff;border-radius:16px;padding:1rem 1.2rem;display:flex;gap:.9rem;align-items:center;box-shadow:0 18px 40px -20px rgba(0,0,0,.4)}
+.hero-tag i{width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,var(--orange),var(--amber));display:grid;place-items:center}
+.hero-tag i svg{width:22px;height:22px;fill:#fff}
+.hero-tag b{display:block;color:var(--navy);font-size:1rem;line-height:1.2}
+.hero-tag span{font-size:.82rem;color:var(--muted)}
+.spec{margin-top:4rem;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line)}
+.spec > div{padding:1.6rem 1.4rem 1.8rem 0;display:flex;gap:.9rem;align-items:flex-start}
+.spec > div+div{padding-left:1.6rem;border-left:1px solid var(--line)}
+.spec svg{flex:none;width:30px;height:30px;stroke:var(--green);fill:none;stroke-width:1.6}
+.spec b{display:block;font-size:1rem;color:var(--navy);line-height:1.25}
+.spec span{font-size:.86rem;color:var(--muted);line-height:1.4;display:block;margin-top:.2rem}
+
+/* services */
+.services{padding:7rem 0 6rem;background:#fff}
+.sec-head{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:end;margin-bottom:3.4rem}
+.sec-head h2{font-size:clamp(2.3rem,4.4vw,3.8rem);color:var(--navy);margin-top:1rem}
+.sec-head p{color:var(--muted);max-width:470px;justify-self:end}
+.panels{display:flex;gap:14px;height:540px}
+.panel{position:relative;flex:1;border-radius:22px;overflow:hidden;cursor:pointer;transition:flex .7s cubic-bezier(.7,0,.2,1);background:var(--navy)}
+.panel.open{flex:2.6}
+.panel img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .9s,opacity .5s;opacity:.85}
+.panel.open img{opacity:1}
+.panel::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,11,74,.05) 30%,rgba(7,11,74,.92))}
+.panel .num{position:absolute;top:22px;left:24px;z-index:2;font-family:var(--serif);font-style:italic;font-size:2.2rem;color:#fff;line-height:1}
+.panel .vlabel{position:absolute;left:26px;bottom:30px;z-index:2;color:#fff;font-weight:700;font-size:1.35rem;writing-mode:vertical-rl;transform:rotate(180deg);transition:opacity .3s;white-space:nowrap}
+.panel.open .vlabel{opacity:0}
+.panel .body{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:2rem 2.2rem;color:#fff;opacity:0;transform:translateY(16px);transition:opacity .35s .1s,transform .45s .1s}
+.panel.open .body{opacity:1;transform:none}
+.panel h3{font-size:2rem;margin-bottom:.7rem}
+.panel p{color:rgba(255,255,255,.82);max-width:440px;font-size:.98rem}
+.panel .more{display:inline-flex;align-items:center;gap:.5rem;margin-top:1.1rem;font-weight:600;color:var(--amber)}
+.panel .more svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2}
+.also{margin-top:2.4rem;display:flex;flex-wrap:wrap;align-items:center;gap:.7rem}
+.also > span{font-weight:700;color:var(--navy);margin-right:.6rem;font-size:.95rem}
+.chip{padding:.55rem 1.05rem;border:1px solid var(--line);border-radius:100px;font-size:.9rem;color:var(--ink);background:var(--paper);display:inline-flex;gap:.5rem;align-items:center}
+.chip::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--lime)}
+
+/* intro */
+.intro{background:var(--navy);color:#fff;position:relative;overflow:hidden;padding:7.5rem 0}
+.intro::before{content:"";position:absolute;right:-180px;top:-180px;width:560px;height:560px;border-radius:50%;border:70px solid rgba(78,190,22,.08)}
+.intro-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:5rem;align-items:center;position:relative}
+.van{position:relative}
+.van .frame{border-radius:6px 90px 6px 6px;overflow:hidden;position:relative;z-index:1}
+.van .frame img{width:100%;aspect-ratio:4/3.6;object-fit:cover}
+.van::before{content:"";position:absolute;left:-26px;bottom:-26px;width:62%;height:62%;background:linear-gradient(135deg,var(--green),var(--lime));border-radius:6px}
+.van .cap{position:absolute;z-index:2;right:-20px;top:42px;background:#fff;color:var(--navy);padding:.9rem 1.1rem;border-radius:12px;font-weight:700;font-size:.9rem;line-height:1.3;box-shadow:0 18px 40px -16px rgba(0,0,0,.5)}
+.van .cap span{display:block;font-weight:500;color:var(--muted);font-size:.78rem}
+.intro .eyebrow{color:var(--lime)}
+.intro h2{font-size:clamp(2.3rem,4.2vw,3.7rem);margin:1rem 0 1.4rem}
+.intro h2 em.s{color:var(--amber)}
+.intro p{color:rgba(255,255,255,.75);max-width:560px}
+.intro p + p{margin-top:1rem}
+.feat{list-style:none;margin:2.2rem 0 2.4rem;display:grid;grid-template-columns:1fr 1fr;gap:0 2rem}
+.feat li{display:flex;gap:.9rem;align-items:center;padding:.95rem 0;border-bottom:1px solid rgba(255,255,255,.13);font-weight:600}
+.feat li i{font-style:normal;font-family:var(--serif);font-size:1.3rem;color:var(--lime);width:28px;flex:none}
+.intro-btns{display:flex;flex-wrap:wrap;gap:.9rem}
+
+/* visit */
+.visit{padding:6.5rem 0;background:var(--sand)}
+.visit h2{font-size:clamp(2.1rem,3.8vw,3.2rem);color:var(--navy);max-width:760px;margin-top:1rem}
+.steps{margin-top:3.2rem;display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative}
+.steps::before{content:"";position:absolute;top:31px;left:0;right:0;height:2px;background:repeating-linear-gradient(90deg,var(--navy) 0 10px,transparent 10px 18px);opacity:.25}
+.step{padding-right:2rem;position:relative}
+.step .dot{width:64px;height:64px;border-radius:50%;background:var(--paper);border:2px solid var(--navy);display:grid;place-items:center;font-family:var(--serif);font-style:italic;font-size:1.6rem;color:var(--navy);position:relative;z-index:1;transition:.3s}
+.step:hover .dot{background:var(--navy);color:#fff}
+.step:last-child .dot{background:var(--green);border-color:var(--green);color:#fff}
+.step h3{font-size:1.25rem;color:var(--navy);margin:1.4rem 0 .5rem;letter-spacing:-.01em}
+.step p{color:var(--muted);font-size:.95rem}
+
+/* testimonials */
+.reviews{padding:7rem 0;background:var(--paper)}
+.rev-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:5rem}
+.rev-side{position:sticky;top:130px;align-self:start}
+.rev-side h2{font-size:clamp(2.3rem,4.2vw,3.6rem);color:var(--navy);margin:1rem 0 1.2rem}
+.rev-side p{color:var(--muted)}
+.rev-side .big{margin-top:2.2rem;font-family:var(--serif);font-size:9rem;line-height:.6;background:linear-gradient(135deg,var(--orange),var(--amber));-webkit-background-clip:text;background-clip:text;color:transparent}
+.quote{background:#fff;border-radius:24px;padding:2.4rem 2.6rem;border:1px solid var(--line);position:relative}
+.quote + .quote{margin-top:1.4rem}
+.quote:nth-child(2){margin-left:3.5rem}
+.quote blockquote{font-family:var(--serif);font-size:1.62rem;line-height:1.3;color:var(--ink)}
+.quote footer{display:flex;align-items:center;gap:.9rem;margin-top:1.6rem}
+.quote .av{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;font-weight:700;color:#fff;background:var(--navy)}
+.quote:nth-child(2) .av{background:var(--green)}
+.quote:nth-child(3) .av{background:linear-gradient(135deg,var(--orange),var(--amber))}
+.quote footer b{display:block;color:var(--navy)}
+.quote footer span{font-size:.85rem;color:var(--muted)}
+
+/* faq */
+.faq{padding:7rem 0;background:#fff}
+.faq-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:4rem;align-items:start}
+.faq h2{font-size:clamp(2.2rem,4vw,3.4rem);color:var(--navy);margin:1rem 0 2.4rem;max-width:640px}
+.qa{border-top:1px solid var(--line)}
+.qa:last-child{border-bottom:1px solid var(--line)}
+.qa button{width:100%;background:none;border:0;text-align:left;display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1.5rem 0;font-family:inherit;font-size:1.22rem;font-weight:600;color:var(--navy);cursor:pointer}
+.qa button i{flex:none;width:38px;height:38px;border-radius:50%;border:1px solid var(--line);position:relative;transition:.3s}
+.qa button i::before,.qa button i::after{content:"";position:absolute;left:50%;top:50%;width:13px;height:2px;background:var(--navy);transform:translate(-50%,-50%);transition:.3s}
+.qa button i::after{transform:translate(-50%,-50%) rotate(90deg)}
+.qa.open button i{background:var(--green);border-color:var(--green)}
+.qa.open button i::before,.qa.open button i::after{background:#fff}
+.qa.open button i::after{transform:translate(-50%,-50%) rotate(0)}
+.qa .a{display:grid;grid-template-rows:0fr;transition:grid-template-rows .4s}
+.qa.open .a{grid-template-rows:1fr}
+.qa .a > div{overflow:hidden}
+.qa .a p{color:var(--muted);padding:0 3.5rem 1.6rem 0}
+.dry{background:var(--navy);color:#fff;border-radius:26px;padding:2.6rem;position:sticky;top:130px;overflow:hidden}
+.dry::after{content:"";position:absolute;right:-60px;bottom:-60px;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(78,190,22,.35),transparent 70%)}
+.dry .hrs{font-size:5.2rem;font-weight:800;line-height:.9;letter-spacing:-.04em}
+.dry .hrs em.s{font-size:.5em;color:var(--lime);font-weight:400}
+.dry h3{font-size:1.5rem;margin:1rem 0 .7rem}
+.dry p{color:rgba(255,255,255,.72);font-size:.96rem;margin-bottom:1.6rem;position:relative;z-index:1}
+
+/* quote/contact */
+.contact{padding:7rem 0;background:var(--sand)}
+.contact-box{display:grid;grid-template-columns:1.15fr .85fr;border-radius:30px;overflow:hidden;background:#fff;box-shadow:0 40px 80px -50px rgba(7,11,74,.45)}
+.form{padding:3.6rem}
+.form h2{font-size:clamp(2rem,3.4vw,2.9rem);color:var(--navy);margin:1rem 0 .7rem}
+.form > p{color:var(--muted);margin-bottom:2rem}
+.fields{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.fields .full{grid-column:1/-1}
+.fields label{display:block;font-size:.8rem;font-weight:600;color:var(--navy);margin-bottom:.4rem;letter-spacing:.02em}
+.fields input,.fields select,.fields textarea{width:100%;padding:.95rem 1.1rem;border:1.5px solid var(--line);border-radius:12px;font-family:inherit;font-size:.98rem;background:var(--paper);color:var(--ink);transition:border .2s,background .2s}
+.fields input:focus,.fields select:focus,.fields textarea:focus{outline:0;border-color:var(--green);background:#fff}
+.fields textarea{min-height:120px;resize:vertical}
+.form .btn{margin-top:1.4rem}
+.info{background:linear-gradient(160deg,var(--green),#1B6B32);color:#fff;padding:3.6rem 3rem;position:relative;overflow:hidden}
+.info::before{content:"";position:absolute;inset:auto -80px -80px auto;width:300px;height:300px;background:url(images/rgson-logo.svg) no-repeat center/contain;opacity:.08}
+.info h3{font-size:1.7rem;margin-bottom:2rem}
+.info ul{list-style:none;position:relative}
+.info li{display:flex;gap:1rem;padding:1.15rem 0;border-bottom:1px solid rgba(255,255,255,.18)}
+.info li svg{flex:none;width:22px;height:22px;fill:var(--amber);margin-top:3px}
+.info li span{display:block;font-size:.76rem;text-transform:uppercase;letter-spacing:.12em;color:rgba(255,255,255,.7);font-weight:600}
+.info li b{font-size:1.08rem;font-weight:600}
+.info .soc{margin-top:2rem}
+.info .soc a{width:40px;height:40px}
+.info .soc a svg{width:16px;height:16px}
+
+/* footer */
+footer.site{background:var(--navy-deep);color:rgba(255,255,255,.72);padding:5.5rem 0 0;font-size:.95rem;position:relative;overflow:hidden}
+.ft-top > *{min-width:0}
+.ft-top{display:grid;grid-template-columns:1.3fr .8fr .9fr 1.2fr;gap:3rem;padding-bottom:4rem}
+.ft-brand .badge{width:112px;height:112px;border-radius:50%;background:#fff;display:grid;place-items:center;margin-bottom:1.4rem}.ft-brand .badge img{width:84px}
+.ft-brand p{max-width:300px}
+footer.site h4{color:#fff;font-size:1.05rem;margin-bottom:1.2rem;font-weight:600}
+footer.site ul{list-style:none}
+footer.site li{padding:.35rem 0}
+footer.site li a:hover{color:var(--lime)}
+.news p{margin-bottom:1rem}
+.news form{display:flex;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.15);border-radius:100px;padding:5px}
+.news input{flex:1;background:none;border:0;color:#fff;padding:.7rem 1rem;font-family:inherit;font-size:.92rem;min-width:0}
+.news input::placeholder{color:rgba(255,255,255,.5)}
+.news input:focus{outline:0}
+.news button{background:var(--green);color:#fff;border:0;border-radius:100px;padding:.7rem 1.2rem;font-family:inherit;font-weight:600;cursor:pointer}
+.news button:hover{background:var(--lime)}
+.ft-word{font-size:clamp(4rem,15vw,13.5rem);font-weight:800;letter-spacing:-.05em;line-height:.8;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.12);white-space:nowrap;text-align:center;margin-bottom:-.12em;user-select:none}
+.ft-bot{border-top:1px solid rgba(255,255,255,.12);padding:1.5rem 0;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;font-size:.86rem;position:relative;background:var(--navy-deep)}
+.ft-bot a{color:var(--lime);font-weight:600}
+.ft-bot a:hover{text-decoration:underline}
+
+/* mobile bar */
+.mbar{display:none}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s ease}
+.rv.in{opacity:1;transform:none}
+
+@media (max-width:1080px){
+  nav,.hdr-phone{display:none}
+  .burger{display:block}
+  nav.show{display:block;position:absolute;top:86px;left:0;right:0;background:var(--paper);border-bottom:1px solid var(--line);padding:1rem 4%}
+  nav.show ul{flex-direction:column;gap:0}
+  nav.show li a{display:block;padding:.9rem 0;border-bottom:1px solid var(--line)}
+  .hero-grid,.intro-grid,.rev-grid,.faq-grid,.contact-box,.sec-head{grid-template-columns:1fr}
+  .sec-head p{justify-self:start}
+  .hero-visual{height:460px}
+  .spec{grid-template-columns:1fr 1fr}
+  .spec > div:nth-child(3){border-left:0;padding-left:0}
+  .steps{grid-template-columns:1fr 1fr;gap:2.5rem 0}
+  .steps::before{display:none}
+  .ft-top{grid-template-columns:1fr 1fr}
+  .rev-side,.dry{position:static}
+  .van{margin:0 0 1.5rem 26px}
+}
+@media (max-width:720px){
+  body{font-size:16px}
+  .util-l span.hrs,.util .soc{display:none}
+  .hdr-cta .btn{display:none}
+  .hero{padding-top:2.6rem}
+  .hero-img{inset:0}
+  .seal{width:120px;height:120px;left:10px;top:auto;bottom:-20px}
+  .seal img{width:46px}
+  .seal svg.ring text{font-size:10px}
+  .hero-tag{right:12px;bottom:auto;top:14px}
+  .spec{grid-template-columns:1fr;margin-top:3rem}
+  .spec div,.spec > div+div{border-left:0;padding-left:0;border-bottom:1px solid var(--line);padding:1.2rem 0}
+  .panels{flex-direction:column;height:auto}
+  .panel,.panel.open{flex:none;height:380px}
+  .panel .vlabel{display:none}
+  .panel .body{opacity:1;transform:none;padding:1.6rem}
+  .panel h3{font-size:1.55rem}
+  .panel .num{font-size:1.6rem}
+  .feat{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr}
+  .quote:nth-child(2){margin-left:0}
+  .quote{padding:1.8rem}
+  .quote blockquote{font-size:1.35rem}
+  .fields{grid-template-columns:1fr}
+  .form,.info{padding:2.4rem 1.6rem}
+  .ft-top{grid-template-columns:1fr}
+  .van .cap{right:8px}
+  footer.site{padding-bottom:64px}
+  .mbar{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:60}
+  .mbar a{padding:1rem;text-align:center;font-weight:700;color:#fff;background:var(--navy)}
+  .mbar a:last-child{background:var(--green)}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<div class="util">
+  <div class="wrap">
+    <div class="util-l">
+      <span><svg viewBox="0 0 24 24"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>Calgary, AB</span>
+      <span class="hrs"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm1 10.4 3.5 2.1-.8 1.3L11 13V7h2v5.4z"/></svg>Mon - Sat (8:00 AM - 6:00 PM)</span>
+    </div>
+    <div class="util-r">
+      <a href="mailto:info@rgsoncarpetcleaning.ca"><svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>info@rgsoncarpetcleaning.ca</a>
+      <div class="soc">
+        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M14 8h3V4h-3c-2.8 0-4 1.7-4 4.3V10H7v4h3v8h4v-8h3l1-4h-4V8.6c0-.4.3-.6.6-.6z"/></svg></a>
+        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 7.3A4.7 4.7 0 1 0 12 16.7 4.7 4.7 0 0 0 12 7.3zm0 7.7a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm6-7.9a1.1 1.1 0 1 1-2.2 0 1.1 1.1 0 0 1 2.2 0zM21.9 7c-.1-1.6-.4-3-1.6-4.2S17.6 1.2 16 1.1C14.4 1 9.6 1 8 1.1 6.4 1.2 5 1.5 3.8 2.7S2.2 5.4 2.1 7C2 8.6 2 13.4 2.1 15c.1 1.6.4 3 1.6 4.2s2.6 1.5 4.2 1.6c1.6.1 6.4.1 8 0 1.6-.1 3-.4 4.2-1.6s1.5-2.6 1.6-4.2c.1-1.6.1-6.4.2-8zM19.8 18.3a3.3 3.3 0 0 1-1.9 1.9c-1.3.5-4.4.4-5.9.4s-4.6.1-5.9-.4a3.3 3.3 0 0 1-1.9-1.9c-.5-1.3-.4-4.4-.4-5.9s-.1-4.6.4-5.9A3.3 3.3 0 0 1 6.1 4.6c1.3-.5 4.4-.4 5.9-.4s4.6-.1 5.9.4a3.3 3.3 0 0 1 1.9 1.9c.5 1.3.4 4.4.4 5.9s.1 4.6-.4 5.9z"/></svg></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<header>
+  <div class="wrap">
+    <a href="#" class="brand"><img src="images/rgson-logo.svg" alt="RGSon Carpet Cleaning logo"><div><b>RGSon Carpet Cleaning</b><small>Calgary, Alberta</small></div></a>
+    <nav id="nav">
+      <ul>
+        <li><a href="#" class="on">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#quote">Get A Quote!</a></li>
+        <li><a href="#contact">Contacts</a></li>
+      </ul>
+    </nav>
+    <div class="hdr-cta">
+      <a class="hdr-phone" href="tel:5875839989"><span>Call us</span>587-583-9989</a>
+      <a class="btn btn-green" href="#quote">Book Now</a>
+      <button class="burger" aria-label="Menu" onclick="document.getElementById('nav').classList.toggle('show')"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="rv">
+        <span class="eyebrow">Best and Trusted Carpet Cleaning in Calgary</span>
+        <h1>Transforming carpets from <span class="tired">tired</span> to <em class="s">triumphant.</em></h1>
+        <p class="lead">RGSon brings truck-mounted steam cleaning and expert techniques to every job, for a deep clean that lifts stains, removes odors and brings your carpets back to life.</p>
+        <div class="hero-btns">
+          <a class="btn btn-green" href="#quote">Get A Quote <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a class="btn btn-line" href="#services">Our Services</a>
+        </div>
+      </div>
+      <div class="hero-visual rv">
+        <div class="hero-img"><img src="images/carpet-steam-cleaning-hero.jpg" alt="RGSon technician steam cleaning a carpet in a Calgary home"></div>
+        <div class="seal">
+          <svg class="ring" viewBox="0 0 140 140"><defs><path id="c" d="M70,70 m-56,0 a56,56 0 1,1 112,0 a56,56 0 1,1 -112,0"/></defs><text><textPath href="#c">HIGHLY RATED • INSURED &amp; BONDED • CALGARY •</textPath></text></svg>
+          <img src="images/rgson-logo.svg" alt="">
+        </div>
+        <div class="hero-tag">
+          <i><svg viewBox="0 0 24 24"><path d="M3 6h11v9H3zM14 9h4l3 3v3h-7zM6.5 18.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm11 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/></svg></i>
+          <div><b>Truck-mounted equipment</b><span>Hot water extraction</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="spec rv">
+      <div><svg viewBox="0 0 24 24"><path d="M12 3l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.4 6.8 19.1l1-5.8L3.5 9.2l5.9-.9z"/></svg><div><b>Highly Rated</b><span>Trusted by Calgary homes and businesses</span></div></div>
+      <div><svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.5-3.4 8.2-8 9-4.6-.8-8-4.5-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg><div><b>Insured &amp; Bonded</b><span>Peace of mind on every visit</span></div></div>
+      <div><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div><b>Dry in a few hours</b><span>Back on your carpets the same day</span></div></div>
+      <div><svg viewBox="0 0 24 24"><path d="M3 21V9l9-6 9 6v12"/><path d="M9 21v-6h6v6"/></svg><div><b>Residential &amp; Commercial</b><span>Homes, offices and rentals</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div><span class="eyebrow">Our Services</span><h2>A super deep clean, <em class="s">right down</em> to the fibre.</h2></div>
+      <p>From high-traffic carpet to your favourite sofa and the grout lines in your kitchen, every job starts with an inspection so we use the right method for the surface.</p>
+    </div>
+    <div class="panels rv" id="panels">
+      <article class="panel open">
+        <img src="images/carpet-steam-cleaning.jpg" alt="Carpet steam cleaning with hot water extraction">
+        <span class="num">01</span><span class="vlabel">Carpet Steam Cleaning</span>
+        <div class="body"><h3>Carpet Steam Cleaning</h3><p>Hot water extraction powered by our truck-mounted equipment. Our Super Deep extraction pulls out embedded dirt, spots and odors that regular vacuuming leaves behind.</p><a class="more" href="#quote">Learn more <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+      </article>
+      <article class="panel">
+        <img src="images/upholstery-cleaning.jpg" alt="Upholstery cleaning on a fabric sofa">
+        <span class="num">02</span><span class="vlabel">Upholstery Cleaning</span>
+        <div class="body"><h3>Upholstery Cleaning</h3><p>We inspect each piece first to choose the right cleaning method for the fabric. Most upholstery is dry within just a few hours.</p><a class="more" href="#quote">Learn more <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+      </article>
+      <article class="panel">
+        <img src="images/tile-grout-cleaning.jpg" alt="Tile and grout cleaning with a rotary surface cleaner">
+        <span class="num">03</span><span class="vlabel">Tile &amp; Grout Cleaning</span>
+        <div class="body"><h3>Tile &amp; Grout Cleaning</h3><p>Grout lines make or break how your tile looks. We focus on lifting the grime from the grout so the whole floor looks fresh again.</p><a class="more" href="#quote">Learn more <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+      </article>
+    </div>
+    <div class="also rv">
+      <span>We also handle</span>
+      <span class="chip">Area Rug Cleaning</span>
+      <span class="chip">Spot &amp; Stain Removal</span>
+      <span class="chip">Odor Removal</span>
+      <span class="chip">Residential Carpet Cleaning</span>
+      <span class="chip">Commercial Carpet Cleaning</span>
+    </div>
+  </div>
+</section>
+
+<section class="intro" id="about">
+  <div class="wrap intro-grid">
+    <div class="van rv">
+      <div class="frame"><img src="images/rgson-service-van.jpg" alt="RGSon Carpet Cleaning service van"></div>
+      <div class="cap">Calgary based<span>Local carpet cleaning company</span></div>
+    </div>
+    <div class="rv">
+      <span class="eyebrow">Our Introduction</span>
+      <h2>Welcome to RGSON <em class="s">Carpet Cleaning</em></h2>
+      <p>We are a Calgary based local carpet cleaning company offering carpet, area rug, upholstery, spot and stain, odor, and tile and grout cleaning for residential and commercial clients.</p>
+      <p>We are committed to deep cleaning and restoration that leaves your space looking and feeling fresh, handled by people you can trust in your home.</p>
+      <ul class="feat">
+        <li><i>01</i>Highly Rated Carpet Cleaning</li>
+        <li><i>02</i>Insured &amp; Bonded</li>
+        <li><i>03</i>Trusted Professionals</li>
+        <li><i>04</i>Residential Carpet Cleaning</li>
+        <li><i>05</i>Commercial Carpet Cleaning</li>
+      </ul>
+      <div class="intro-btns">
+        <a class="btn btn-white" href="#services">Discover More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn-ghost" href="tel:5875839989">587-583-9989</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="visit">
+  <div class="wrap">
+    <div class="rv"><span class="eyebrow">How carpet cleaning works</span>
+    <h2>What happens when we <em class="s">arrive</em> at your door.</h2></div>
+    <div class="steps">
+      <div class="step rv"><div class="dot">1</div><h3>We assess</h3><p>Every job starts with a look at your carpet so we can pick the right method for the fibre.</p></div>
+      <div class="step rv"><div class="dot">2</div><h3>We pre-vacuum</h3><p>No need to vacuum before we come. Our technicians do it as part of the service.</p></div>
+      <div class="step rv"><div class="dot">3</div><h3>We deep clean</h3><p>Truck-mounted steam cleaning, or a low-moisture dry method when that suits your carpet better.</p></div>
+      <div class="step rv"><div class="dot">4</div><h3>You enjoy</h3><p>Carpets are usually dry in just a few hours. Keep kids and pets off until fully dry.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="reviews">
+  <div class="wrap rev-grid">
+    <div class="rev-side rv">
+      <span class="eyebrow">Testimonials</span>
+      <h2>What our clients <em class="s">say</em> about us</h2>
+      <p>Read what our satisfied customers have to say about the RGSon team and the results in their homes.</p>
+      <div class="big">&ldquo;</div>
+    </div>
+    <div>
+      <div class="quote rv">
+        <blockquote>They cleaned our floors and rugs and even got rid of a coffee spill we thought was there for good. Everything looks great.</blockquote>
+        <footer><span class="av">R</span><div><b>Robert P.</b><span>Calgary, AB</span></div></footer>
+      </div>
+      <div class="quote rv">
+        <blockquote>Very thorough work from kind, friendly people. They took care of the area around them and respected our space. I would recommend them.</blockquote>
+        <footer><span class="av">J</span><div><b>John J.</b><span>Calgary, AB</span></div></footer>
+      </div>
+      <div class="quote rv">
+        <blockquote>Professional, friendly staff and excellent customer service. Our carpet and the whole house feel fresh.</blockquote>
+        <footer><span class="av">D</span><div><b>Dan C.</b><span>Calgary, AB</span></div></footer>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="wrap faq-grid">
+    <div>
+      <div class="rv"><span class="eyebrow">Company FAQs</span>
+      <h2>Frequently asked questions from our clients</h2></div>
+      <div class="rv" id="faq">
+        <div class="qa open"><button>How much do you charge?<i></i></button><div class="a"><div><p>Pricing depends on the service and the size of the job. Our current rates are listed on our Services page, or send us a request and we will send you a quote.</p></div></div></div>
+        <div class="qa"><button>How does carpet cleaning work?<i></i></button><div class="a"><div><p>We start with an assessment of your carpet to choose the right method. That is usually truck-mounted steam cleaning (hot water extraction), or a dry cleaning technique with low-moisture solvents where it suits the carpet better.</p></div></div></div>
+        <div class="qa"><button>Do I need to vacuum before my service?<i></i></button><div class="a"><div><p>No. Our technicians pre-vacuum before cleaning, so there is nothing you need to do ahead of the visit.</p></div></div></div>
+        <div class="qa"><button>How long will it take my carpets to dry after carpet cleaning?<i></i></button><div class="a"><div><p>Often just a few hours. Please keep children and pets off the carpet until it is fully dry.</p></div></div></div>
+      </div>
+    </div>
+    <aside class="dry rv">
+      <div class="hrs">A few <em class="s">hours</em></div>
+      <h3>That's all it takes to dry.</h3>
+      <p>Our truck-mounted extraction pulls the water back out with the dirt, so your carpets and upholstery are ready again the same day.</p>
+      <a class="btn btn-white" href="#quote">Book Now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </aside>
+  </div>
+</section>
+
+<section class="contact" id="quote">
+  <div class="wrap">
+    <div class="contact-box rv">
+      <form class="form" onsubmit="event.preventDefault();this.querySelector('.btn').textContent='Thanks! We will be in touch.'">
+        <span class="eyebrow">Get A Quote</span>
+        <h2>Tell us what needs <em class="s">cleaning.</em></h2>
+        <p>Share a few details and our team will get back to you with a quote.</p>
+        <div class="fields">
+          <div><label for="n">Full name</label><input id="n" required placeholder="Your name"></div>
+          <div><label for="p">Phone</label><input id="p" type="tel" required placeholder="(587) 000-0000"></div>
+          <div><label for="e">Email</label><input id="e" type="email" placeholder="you@email.com"></div>
+          <div><label for="s">Service</label>
+            <select id="s"><option>Carpet Steam Cleaning</option><option>Upholstery Cleaning</option><option>Tile &amp; Grout Cleaning</option><option>Area Rug Cleaning</option><option>Spot &amp; Stain Removal</option><option>Odor Removal</option><option>Commercial Carpet Cleaning</option></select></div>
+          <div class="full"><label for="m">Details</label><textarea id="m" placeholder="Number of rooms, stairs, stains, pets..."></textarea></div>
+        </div>
+        <button class="btn btn-green" type="submit">Request My Quote <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+      </form>
+      <div class="info" id="contact">
+        <h3>Contact Us</h3>
+        <ul>
+          <li><svg viewBox="0 0 24 24"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg><div><span>Phone</span><b><a href="tel:5875839989">587-583-9989</a></b></div></li>
+          <li><svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg><div><span>Email</span><b><a href="mailto:info@rgsoncarpetcleaning.ca">info@rgsoncarpetcleaning.ca</a></b></div></li>
+          <li><svg viewBox="0 0 24 24"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg><div><span>Location</span><b>Calgary, AB</b></div></li>
+          <li><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm1 10.4 3.5 2.1-.8 1.3L11 13V7h2v5.4z"/></svg><div><span>Hours</span><b>Mon - Sat, 8:00 AM - 6:00 PM</b></div></li>
+        </ul>
+        <div class="soc">
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M14 8h3V4h-3c-2.8 0-4 1.7-4 4.3V10H7v4h3v8h4v-8h3l1-4h-4V8.6c0-.4.3-.6.6-.6z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 7.3A4.7 4.7 0 1 0 12 16.7 4.7 4.7 0 0 0 12 7.3zm0 7.7a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm6-7.9a1.1 1.1 0 1 1-2.2 0 1.1 1.1 0 0 1 2.2 0zM21.9 7c-.1-1.6-.4-3-1.6-4.2S17.6 1.2 16 1.1C14.4 1 9.6 1 8 1.1 6.4 1.2 5 1.5 3.8 2.7S2.2 5.4 2.1 7C2 8.6 2 13.4 2.1 15c.1 1.6.4 3 1.6 4.2s2.6 1.5 4.2 1.6c1.6.1 6.4.1 8 0 1.6-.1 3-.4 4.2-1.6s1.5-2.6 1.6-4.2c.1-1.6.1-6.4.2-8zM19.8 18.3a3.3 3.3 0 0 1-1.9 1.9c-1.3.5-4.4.4-5.9.4s-4.6.1-5.9-.4a3.3 3.3 0 0 1-1.9-1.9c-.5-1.3-.4-4.4-.4-5.9s-.1-4.6.4-5.9A3.3 3.3 0 0 1 6.1 4.6c1.3-.5 4.4-.4 5.9-.4s4.6-.1 5.9.4a3.3 3.3 0 0 1 1.9 1.9c.5 1.3.4 4.4.4 5.9s.1 4.6-.4 5.9z"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="ft-top">
+      <div class="ft-brand">
+        <span class="badge"><img src="images/rgson-logo.svg" alt="RGSon Carpet Cleaning"></span>
+        <p>Calgary based local carpet cleaning company. Truck-mounted equipment and expert techniques for homes and businesses.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul><li><a href="#">Home</a></li><li><a href="#about">About Us</a></li><li><a href="#services">Services</a></li><li><a href="#quote">Get A Quote!</a></li><li><a href="#contact">Contacts</a></li></ul>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul><li><a href="#services">Carpet Steam Cleaning</a></li><li><a href="#services">Upholstery Cleaning</a></li><li><a href="#services">Tile &amp; Grout Cleaning</a></li></ul>
+      </div>
+      <div class="news">
+        <h4>Newsletter</h4>
+        <p>Subscribe to our newsletter to get our latest updates and news.</p>
+        <form onsubmit="event.preventDefault();this.querySelector('button').textContent='Subscribed'"><input type="email" required placeholder="Your email address"><button>Subscribe</button></form>
+        <p style="margin-top:1.4rem"><a href="tel:5875839989" style="color:#fff;font-weight:600">587-583-9989</a><br>Mon - Sat, 8:00 AM - 6:00 PM</p>
+      </div>
+    </div>
+  </div>
+  <div class="ft-word">RGSon</div>
+  <div class="ft-bot"><div class="wrap" style="display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap">
+    <span>&copy;2026 RGSon Carpet Cleaning. All Rights Reserved.</span>
+    <span>Design by <a href="https://cleaningdigital.ca/" target="_blank" rel="noopener">Cleaning Digital</a>.</span>
+  </div></div>
+</footer>
+
+<div class="mbar"><a href="tel:5875839989">Call Now</a><a href="#quote">Get A Quote</a></div>
+
+<script>
+// service panels
+document.querySelectorAll('.panel').forEach(p=>{
+  const open=()=>{document.querySelectorAll('.panel').forEach(x=>x.classList.remove('open'));p.classList.add('open')};
+  p.addEventListener('mouseenter',open);p.addEventListener('click',open);
+});
+// faq
+document.querySelectorAll('.qa button').forEach(b=>b.addEventListener('click',()=>{
+  const q=b.parentElement,was=q.classList.contains('open');
+  document.querySelectorAll('.qa').forEach(x=>x.classList.remove('open'));
+  if(!was)q.classList.add('open');
+}));
+// reveal
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
